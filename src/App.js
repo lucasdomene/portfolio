@@ -1,3 +1,9 @@
+import NavBar from './components/NavBar';
+
 export default function App() {
-  return <div className="font-bold text-2xl">Hello World</div>;
+  return (
+    <div>
+      <NavBar />
+    </div>
+  );
 }
