@@ -1,10 +1,34 @@
 import React, { useState } from 'react';
 import Logo from '../assets/logo.png';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 export default function NavBar() {
   const menuItems = ['Home', 'About', 'Skills', 'Work', 'Contact'];
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const socialData = [
+    {
+      name: 'Linkedin',
+      icon: <FaLinkedin size={30} />,
+      color: 'bg-blue-500',
+    },
+    {
+      name: 'Github',
+      icon: <FaGithub size={30} />,
+      color: 'bg-gray-800',
+    },
+    {
+      name: 'Email',
+      icon: <HiOutlineMail size={30} />,
+      color: 'bg-red-500',
+    },
+    {
+      name: 'Resume',
+      icon: <BsFillPersonLinesFill size={30} />,
+      color: 'bg-gray-500',
+    },
+  ];
 
   function handleMenuClick() {
     setIsMenuOpened(!isMenuOpened);
@@ -41,6 +65,33 @@ export default function NavBar() {
       )}
 
       {/* Social Icons */}
+      <div className="flex fixed flex-col top-[35%] left-0">
+        <ul>
+          {socialData.map((item) => (
+            <li
+              className={`w-[160px] h-[60px] ml-[-100px] hover:ml-0 duration-300 ease-in ${item.color} flex items-center justify-between`}
+            >
+              <a
+                href="/"
+                className="flex justify-between items-center w-full text-gray-300 mx-3"
+              >
+                {item.name}
+                {item.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
+
+<li className="w-[160px] h-[60px] ml-[-100px] hover:ml-0 duration-300 ease-in bg-blue-500 flex items-center justify-between">
+  <a
+    href="/"
+    className="flex justify-between items-center w-full text-gray-300 mx-3"
+  >
+    Linkedin
+    <FaLinkedin size={30} />
+  </a>
+</li>;
