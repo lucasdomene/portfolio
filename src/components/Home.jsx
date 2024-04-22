@@ -1,7 +1,7 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 
-export function Home() {
+export default function Home() {
   return (
     <div name="home" className="bg-primary h-screen w-full">
       {/* Container */}
