@@ -65,7 +65,7 @@ export default function NavBar() {
       )}
 
       {/* Social Icons */}
-      <div className="flex fixed flex-col top-[35%] left-0">
+      <div className="hidden md:flex fixed flex-col top-[35%] left-0">
         <ul>
           {socialData.map((item) => (
             <li
