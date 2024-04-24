@@ -16,7 +16,7 @@ export default function Contact() {
             Contact
           </p>
           <p className="text-gray-300 py-4">
-            Submit the form below of shoot me an email - lucas.firmo@gmail.com
+            Submit the form below or shoot me an email - lucas.firmo@gmail.com
           </p>
         </div>
         <input
