@@ -1,8 +1,16 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { TypeAnimation } from 'react-type-animation';
+import { scroller } from 'react-scroll';
 
 export default function Home() {
+  function handleButtonClicked() {
+    scroller.scrollTo('work', {
+      smooth: true,
+      duration: 1500,
+    });
+  }
+
   return (
     <div name="home" className="bg-primary h-screen w-full">
       {/* Container */}
@@ -29,7 +37,10 @@ export default function Home() {
           applications.
         </p>
         <div>
-          <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600">
+          <button
+            className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600"
+            onClick={handleButtonClicked}
+          >
             View Work
             <span className="group-hover:rotate-90 duration-300">
               <HiArrowNarrowRight className="ml-3" />
