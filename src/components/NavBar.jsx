@@ -36,7 +36,7 @@ export default function NavBar() {
   }
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-primary text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-primary text-gray-300 z-20">
       {/* Logo */}
       <div>
         <img src={Logo} alt="logo" className="w-12" />
@@ -63,7 +63,14 @@ export default function NavBar() {
         <ul className="md:hidden absolute top-0 left-0 w-full h-screen bg-primary flex flex-col justify-center items-center gap-14">
           {menuItems.map((item, index) => (
             <li className="text-4xl cursor-pointer" key={index}>
-              {item}
+              <Link
+                onClick={handleMenuClick}
+                to={item.toLowerCase()}
+                smooth
+                duration={500}
+              >
+                {item}
+              </Link>
             </li>
           ))}
         </ul>
