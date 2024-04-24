@@ -39,7 +39,7 @@ export default function NavBar() {
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-primary text-gray-300 z-20">
       {/* Logo */}
       <div>
-        <img src={Logo} alt="logo" className="w-12" />
+        <img src={Logo} alt="logo" className="w-[80px]" />
       </div>
 
       {/* Desktop Menu */}

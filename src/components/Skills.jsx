@@ -8,8 +8,6 @@ import NODE from '../assets/node.png';
 import MONGO from '../assets/mongo.png';
 import GIT from '../assets/github.png';
 import TAILWIND from '../assets/tailwind.png';
-import AWS from '../assets/aws.png';
-import FIREBASE from '../assets/firebase.png';
 
 export default function Skills() {
   const skills = [
