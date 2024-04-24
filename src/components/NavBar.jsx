@@ -3,6 +3,7 @@ import Logo from '../assets/logo.png';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { Link } from 'react-scroll';
 
 export default function NavBar() {
   const menuItems = ['Home', 'About', 'Skills', 'Work', 'Contact'];
@@ -44,7 +45,11 @@ export default function NavBar() {
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-6 cursor-pointer">
         {menuItems.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item}>
+            <Link to={item.toLowerCase()} smooth duration={500}>
+              {item}
+            </Link>
+          </li>
         ))}
       </ul>
 
