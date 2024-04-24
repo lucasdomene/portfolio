@@ -1,5 +1,6 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
   return (
@@ -11,7 +12,16 @@ export default function Home() {
           Lucas Domene
         </h1>
         <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
-          I'm a iOS Developer
+          <TypeAnimation
+            sequence={[
+              "I'm an iOS Developer",
+              1000,
+              "I'm a Web Developer",
+              1000,
+            ]}
+            speed={30}
+            repeat={Infinity}
+          />
         </h2>
         <p className="text-[#8892b0] py-5 mx-w-[700px]">
           I'm an iOS developer specializing in building exception digital
