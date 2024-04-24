@@ -35,7 +35,7 @@ export default function Skills() {
         </div>
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
           {skills.map((skill) => (
-            <div className="hover:scale-110 duration-500">
+            <div className="hover:scale-110 duration-500" key={skill.name}>
               <img
                 className="w-20 mx-auto"
                 src={skill.icon}

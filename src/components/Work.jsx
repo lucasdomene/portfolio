@@ -35,8 +35,8 @@ export default function Work() {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <WorkItem image={project.image} />
+          {projects.map((project, index) => (
+            <WorkItem image={project.image} key={index} />
           ))}
         </div>
       </div>

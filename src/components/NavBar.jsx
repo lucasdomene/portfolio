@@ -56,8 +56,8 @@ export default function NavBar() {
       {/* Mobile Menu */}
       {isMenuOpened && (
         <ul className="md:hidden absolute top-0 left-0 w-full h-screen bg-primary flex flex-col justify-center items-center gap-14">
-          {menuItems.map((item) => (
-            <li className="text-4xl cursor-pointer" key={item}>
+          {menuItems.map((item, index) => (
+            <li className="text-4xl cursor-pointer" key={index}>
               {item}
             </li>
           ))}
@@ -69,6 +69,7 @@ export default function NavBar() {
         <ul>
           {socialData.map((item) => (
             <li
+              key={item.name}
               className={`w-[160px] h-[60px] ml-[-100px] hover:ml-0 duration-300 ease-in ${item.color} flex items-center justify-between`}
             >
               <a
